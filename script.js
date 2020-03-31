@@ -35,6 +35,7 @@ $(document).ready(function(){
     
     $('a').click(function(){
         $('.main').fadeOut(500, "swing", function(){
+            document.title = 'ПОРНО ОНЛАЙН СЕКСЫ ТОЧКА РУ';
             var audio = new Audio('sound.mp3');
             audio.play();
             $('body').css('background', 'url("https://thumb-p5.xhcdn.com/a/rxu-i_YQEDtbrtRdHAsevw/000/121/192/155_1000.gif")');
