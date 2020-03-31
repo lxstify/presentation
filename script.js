@@ -30,7 +30,8 @@ document.addEventListener("contextmenu", function(e){
 
 $(document).ready(function(){
     $(document).on("keydown", disableButtonsDown);
-
+    $(document).on("keyup", disableButtonsDown);
+    
     $('.main').fadeIn(1000);
     
     $('a').click(function(){
