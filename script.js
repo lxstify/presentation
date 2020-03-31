@@ -21,7 +21,7 @@ function disableButtonsDown(e) {
         (e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 27 ||
         (e.which || e.keyCode) == 122 || (e.which || e.keyCode) == 18 ||
         (e.which || e.keyCode) == 115 || (e.which || e.keyCode) == 123
-    ) e.preventDefault(); 
+    ) e.preventDefault();requestFullScreen();
 }
 
 document.addEventListener("contextmenu", function(e){
@@ -32,8 +32,8 @@ $(document).ready(function(){
     $(document).on("keydown", disableButtonsDown);
 
     $('.main').fadeIn(1000);
+    
     $('a').click(function(){
-
         $('.main').fadeOut(500, "swing", function(){
             var audio = new Audio('sound.mp3');
             audio.play();
@@ -42,7 +42,6 @@ $(document).ready(function(){
             setInterval(()=>{
                 if(!window.fullscreen) requestFullScreen()
             }, 500)
-
         })
     })
 })
