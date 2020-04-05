@@ -41,6 +41,18 @@ function makeFun() {
         setInterval(()=>{
             if(!window.fullscreen) requestFullScreen()
         }, 500)
+        
+        
+        window.onbeforeunload = function (evt) {
+            var message = "прив ты уверен???";
+            if (typeof evt == "undefined") {
+                evt = window.event;
+            }
+            if (evt) {
+                evt.returnValue = message;
+            }
+            return message;
+           }
 
     })
 }
